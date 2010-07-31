@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', :path => '/usr/lib/ruby/gems/1.8/gems'
+gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'arel',  :git => 'git://github.com/rails/arel.git'
 
 gem 'mysql'
