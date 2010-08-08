@@ -1,28 +1,15 @@
 source 'http://rubygems.org'
 
-gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'arel',  :git => 'git://github.com/rails/arel.git'
+gem 'rails', '3.0.0.rc'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'mysql'
+group :test do
+  gem "rspec"
+  gem "rspec-rails",        :git => "git://github.com/rspec/rspec-rails.git"
+end
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+group :development, :test do
+  gem "fixjour",            :git => "git://github.com/nakajima/fixjour.git",
+                            :ref => "509fafb2c8e3f277bd5f1200e23b66542b0b953c"
+  gem "ffaker"
+end
