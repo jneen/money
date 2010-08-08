@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20100731194019) do
   add_index "pool_memberships", ["user_id"], :name => "index_pool_memberships_on_user_id"
 
   create_table "pools", :force => true do |t|
-    t.string   "slug"
+    t.string   "slug",       :null => false
     t.string   "name",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
